@@ -9,7 +9,7 @@
     width: 400px;
     border: 1px solid black;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 100px;
     background-color: white;
     overflow: hidden;
 }
@@ -20,7 +20,7 @@
     width: 60px;
     position: relative;
     left: 400px;
-    animation: tube-move 1.5s infinite linear;
+    animation: tube-move 2s infinite linear;
 }
 
 @keyframes tube-move {
@@ -29,8 +29,8 @@
 }
 
 #player {
-    margin-left: 60px;
     height: 25px;
+    margin-left: 60px;
     width: 25px;
     border-radius: 12.5px;
     background-color: gold;
@@ -40,12 +40,12 @@
 }
 
 #gap {
-    height: 120px;
+    height: 150px;
     background-color: white;
     width: 60px;
     position: relative;
     left: 400px;
     top: -500px;
-    animation: tube-move 1.5s infinite linear;
+    animation: tube-move 2s infinite linear;
 
 }
