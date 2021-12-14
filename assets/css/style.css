@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(9, 155, 160);
+}
+
+#game-box {
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: white;
+}
+
+#tube {
+    height: 500px;
+    background-color: black;
+    width: 50px;
+    position: relative;
+    left: 400px;
+}
+
+#player {
+    height: 25px;
+    width: 25px;
+    border-radius: 12.5px;
+    background-color: gold;
+    position: absolute;
+    top: 250px;
+}
