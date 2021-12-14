@@ -20,7 +20,7 @@
     width: 60px;
     position: relative;
     left: 400px;
-    animation: tube-move 2s infinite linear;
+    animation: tube-move 1.5s infinite linear;
 }
 
 @keyframes tube-move {
@@ -46,6 +46,6 @@
     position: relative;
     left: 400px;
     top: -500px;
-    animation: tube-move 2s infinite linear;
+    animation: tube-move 1.5s infinite linear;
 
 }
