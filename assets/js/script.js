@@ -1,21 +1,33 @@
+// declare variables
+
 let game = document.getElementById('game-box')
 let player = document.getElementById('player')
 let tube = document.getElementById('tube')
 let gap = document.getElementById('gap')
 var jumping = 0;
 let counter = 0;
+let best = document.getElementById('best')
+let score = document.getElementById('score')
 
+
+// iterate animation
 
 gap.addEventListener('animationiteration', function() {
     let random = -((Math.random()*300)+150);
     gap.style.top = random + "px";
     counter++;
     ScoreBoard();
-    
+    if (counter > best.innerText) {
+        updateHighScore();
+    }
+    if (counter >= 2) {
+        level2();
+        console.log('greater than 2')
+    }
 });
 
 
-
+// gravity interal
 
 setInterval (function() {
     var playerTop = 
@@ -30,11 +42,12 @@ setInterval (function() {
         alert("Game over. Score: "+score.innerText);
         player.style.top = 100 + "px";
         counter=0;
-        tube.style.animation=0;
-        gap.style.animation=0;
-        
+        removeAnimation()
+        resetScoreBoard ()
     }
 },5);
+
+// jump function
 
 function jump(){
     jumping = 1;
@@ -50,19 +63,56 @@ function jump(){
             jumpCount=0;
         }
         jumpCount++;
-        tube.style.animation="";
-        gap.style.animation="";
+        if (counter < 2) {
+            addAnimation() }
+            else {
+                removeAnimation ()
+                level2() }
+
     },10);
 }
 
+
+// increment scoreboard
+
 function ScoreBoard () {
-    let score = document.getElementById('score')
+
     score.innerText = counter;
 }
 
-function HighScore () {
-    let highscore = document.getElementById('high-score')
-    highscore.innerText = counter.best;
+// reset scoreboard 
+function resetScoreBoard () { 
+    score.innerText = 0;
 }
 
+
+// update high score
+function updateHighScore () {
+    best.innerText = counter;
+}
+
+
+// remove animation
+function removeAnimation() {
+    tube.style.animation=0;
+    gap.style.animation=0;
+}
+
+//add animation normal
+function addAnimation() {
+    tube.style.animation="";
+    gap.style.animation="";
+}
+
+// increase speed
+function level2() {
+tube.style.position="";
+gap.style.position="";
+tube.style.left="";
+gap.style.left="";
+
+tube.style.animation="tube-move 5s infinite linear";
+gap.style.animation="tube-move 5s infinite linear";
+
+}
 
