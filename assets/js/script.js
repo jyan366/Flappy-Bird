@@ -10,7 +10,12 @@ gap.addEventListener('animationiteration', function() {
     let random = -((Math.random()*300)+150);
     gap.style.top = random + "px";
     counter++;
+    ScoreBoard();
+    
 });
+
+
+
 
 setInterval (function() {
     var playerTop = 
@@ -22,11 +27,12 @@ setInterval (function() {
     var gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
     var pTop = -(500-playerTop);
     if((playerTop>475)||((tubeLeft<80)&&(tubeLeft>-5)&&((pTop<gapTop)||(pTop>gapTop+125)))){
-        alert("Game over. Score: "+(counter-1));
+        alert("Game over. Score: "+score.innerText);
         player.style.top = 100 + "px";
-        tube.style.left = `${400}px`;
-
         counter=0;
+        tube.style.animation=0;
+        gap.style.animation=0;
+        
     }
 },5);
 
@@ -44,5 +50,19 @@ function jump(){
             jumpCount=0;
         }
         jumpCount++;
+        tube.style.animation="";
+        gap.style.animation="";
     },10);
 }
+
+function ScoreBoard () {
+    let score = document.getElementById('score')
+    score.innerText = counter;
+}
+
+function HighScore () {
+    let highscore = document.getElementById('high-score')
+    highscore.innerText = counter.best;
+}
+
+

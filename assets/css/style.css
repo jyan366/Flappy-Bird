@@ -49,3 +49,39 @@
 
 
 }
+
+.score-area {
+    height: 100px;
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    background: white;
+    overflow: hidden;
+}
+
+
+#current-score {
+    background: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+
+#high-score {
+    text-align: center;
+    background: white;
+    font-size: 150%;
+}
+
+#score {
+    background: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+
+#best {
+    text-align: center;
+    background: white;
+    font-size: 150%;
+}
