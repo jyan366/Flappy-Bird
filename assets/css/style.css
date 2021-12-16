@@ -1,15 +1,17 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: darkblue;
+    background-color: white;
 }
-
+body {
+    top: -100px;
+}
 #game-box {
     height: 500px;
     width: 400px;
     border: 1px solid black;
     margin: auto;
-    background: rgb(14, 199, 245);
+    background-color: lightblue;
     overflow: hidden;
 }
 
@@ -85,7 +87,7 @@
 
 #tube {
     height: 500px;
-    background-color: black;
+    background: url(../images/mario.jpeg);
     width: 60px;
     position: relative;
     left: 400px;
@@ -110,7 +112,9 @@
 
 #gap {
     height: 150px;
-    background: rgb(14, 199, 245);
+    background-color: lightblue;
+    border-top: black solid 3px;
+    border-bottom: black solid 3px;
     width: 60px;
     position: relative;
     left: 400px;

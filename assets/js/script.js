@@ -11,6 +11,7 @@ let score = document.getElementById('score')
 let startScreen = document.getElementById('start-screen')
 let endScreen = document.getElementById('end-screen')
 let endScore = document.getElementById('end-score')
+let scoreValue = score.innerHTML
 
 
 // iterate animation
@@ -22,9 +23,6 @@ gap.addEventListener('animationiteration', function() {
     ScoreBoard();
     if (counter > best.innerText) {
         updateHighScore();
-    }
-    if (counter >= 2) {
-        console.log('greater than 2')
     }
 });
 
@@ -46,6 +44,7 @@ setInterval (function() {
         removeAnimation()
         showEndScreen()
     }
+
 },5);
 
 
@@ -67,6 +66,7 @@ function jump(){
         }
         jumpCount++;
         addAnimation() 
+        
     },10);
 }
 
@@ -107,11 +107,11 @@ function showStartScreen() {
 // show end Screen
 
 function showEndScreen() {
+    removeAnimation()
     endScreen.style.display ='block';
-    }
-    endScore.innerText = `Game over. Score: ${counter+1}`;
-    console.log(score.innerText)
-    console.log(counter)
+    console.log(score.innerHTML)
+    endScore.innerText = `Game over. Score: ${score.innerHTML}`;
+}
 
 // increment scoreboard
 
@@ -134,8 +134,8 @@ function updateHighScore () {
 
 // remove animation
 function removeAnimation() {
-    tube.style.animation=0;
-    gap.style.animation=0;
+    tube.style.animation='none';
+    gap.style.animation='none';
 }
 
 //add animation normal
@@ -147,7 +147,10 @@ function addAnimation() {
 
 // increase speed
 function level2() {
-    tube.style.animation.innerText="tube-move 1s infinite linear";
-    gap.style.animation.innerText='tube-move 1s infinite linear';
+    tube.style.left='1000px';
+    tube.style.left='1000px';
+    removeAnimation();
+    tube.style.animation='tube-move 1500ms infinite linear';
+    gap.style.animation='tube-move 1500ms infinite linear';
 }
 
