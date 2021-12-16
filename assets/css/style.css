@@ -9,9 +9,11 @@ body {
 #game-box {
     height: 500px;
     width: 400px;
-    border: 1px solid black;
+    border-top: 10px solid gold;
+    border-right: 10px solid gold;
+    border-left: 10px solid gold;
     margin: auto;
-    background-color: lightblue;
+    background-color: #71c5cf;
     overflow: hidden;
 }
 
@@ -19,9 +21,9 @@ body {
     position: absolute;
     height: 500px;
     width: 400px;
-    border: 1px solid black;
     margin: auto;
-    background: red;
+    background: url(../images/background.png);
+    background-size: cover;
     text-align: center;
     line-height: 400px;
     z-index: 300;
@@ -34,9 +36,8 @@ body {
     position: absolute;
     height: 500px;
     width: 400px;
-    border: 1px solid black;
     margin: auto;
-    background: green;
+    background: url(../images/background.png);
     text-align: center;
     line-height: 400px;
     display: block;
@@ -48,7 +49,7 @@ body {
     height: 50px;
     width: 400px;
     margin: auto;
-    background: green;
+    background: url(../images/background.png);
     text-align: center;
     line-height: 300px;
     display: block;
@@ -100,19 +101,26 @@ body {
 }
 
 #player {
-    height: 25px;
+    background-color: transparent;
+    height: 40px;
     margin-left: 60px;
-    width: 25px;
-    border-radius: 12.5px;
-    background-color: gold;
+    width: 40px;
     position: absolute;
     z-index: 2;
     top: 100px;
 }
 
+#player img {
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 2;
+}
+
 #gap {
     height: 150px;
-    background-color: lightblue;
+    background-color: #71c5cf;
     border-top: black solid 3px;
     border-bottom: black solid 3px;
     width: 60px;
@@ -127,9 +135,10 @@ body {
 .score-area {
     height: 50px;
     width: 400px;
-    border: 1px solid black;
+    border-left: 10px solid gold;
+    border-right: 10px solid gold;
+    border-bottom: 10px solid gold;
     margin: auto;
-    background-color: gold;
     overflow: hidden;
 }
 
@@ -142,12 +151,12 @@ body {
 
 
 #high-score {
-    background-color: gold;
+    background:url(../images/bottom.png);
     color: white;
     text-align: center;
     font-size: 150%;
     font-family: 'VT323';
-    line-height: 50px;
+    top: 30px;
 }
 
 #score {
@@ -164,7 +173,7 @@ body {
 #best {
     font-family: 'VT323';
     text-align: center;
-    background-color: gold;
+    background-color: transparent;
     font-size: 150%;
     line-height: 50px;
 }
