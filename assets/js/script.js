@@ -12,6 +12,8 @@ let startScreen = document.getElementById('start-screen')
 let endScreen = document.getElementById('end-screen')
 let endScore = document.getElementById('end-score')
 let scoreValue = score.innerHTML
+const jumpSound = new Audio("../assets/audio/jump-sound.wav");
+const scoreUp = new Audio("../assets/audio/score-up.mp3");
 
 
 // iterate animation
@@ -24,6 +26,7 @@ gap.addEventListener('animationiteration', function() {
     if (counter > best.innerText) {
         updateHighScore();
     }
+    scoreUp.play();
 });
 
 
@@ -65,7 +68,9 @@ function jump(){
             jumpCount=0;
         }
         jumpCount++;
-        addAnimation() 
+        addAnimation(); 
+        jumpSound.play(); 
+
         
     },10);
 }
@@ -154,3 +159,6 @@ function level2() {
     gap.style.animation='tube-move 1500ms infinite linear';
 }
 
+function playJumpSound() {
+jumpSound.play()
+}
