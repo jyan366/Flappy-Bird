@@ -12,10 +12,10 @@ let startScreen = document.getElementById('start-screen')
 let endScreen = document.getElementById('end-screen')
 let endScore = document.getElementById('end-score')
 let scoreValue = score.innerHTML
-const jumpSound = new Audio("../assets/audio/jump-sound.wav");
-const scoreUp = new Audio("../assets/audio/score-up.mp3");
-const gameOverSound = new Audio("../assets/audio/sad-trombone.mp3");
-const highScoreSound = new Audio("../assets/audio/highscore-sound.mp3");
+const jumpSound = new Audio("assets/audio/jump-sound.wav");
+const scoreUp = new Audio("assets/audio/score-up.mp3");
+const gameOverSound = new Audio("assets/audio/sad-trombone.mp3");
+const highScoreSound = new Audio("assets/audio/highscore-sound.mp3");
 let welcomeText= document.getElementById('welcome-text')
 
 
