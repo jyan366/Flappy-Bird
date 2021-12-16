@@ -14,6 +14,9 @@ let endScore = document.getElementById('end-score')
 let scoreValue = score.innerHTML
 const jumpSound = new Audio("../assets/audio/jump-sound.wav");
 const scoreUp = new Audio("../assets/audio/score-up.mp3");
+const gameOverSound = new Audio("../assets/audio/sad-trombone.mp3");
+const highScoreSound = new Audio("../assets/audio/highscore-sound.mp3");
+let welcomeText= document.getElementById('welcome-text')
 
 
 // iterate animation
@@ -23,6 +26,12 @@ gap.addEventListener('animationiteration', function() {
     gap.style.top = random + "px";
     counter++;
     ScoreBoard();
+    if (counter == best.innerText) {
+        highScoreSound.play();
+        score.style.color='gold';
+        score.style.fontSize="250%";
+        score.style.position='';
+    }
     if (counter > best.innerText) {
         updateHighScore();
     }
@@ -44,6 +53,7 @@ setInterval (function() {
     if((playerTop>475)||((tubeLeft<80)&&(tubeLeft>-5)&&((pTop<gapTop)||(pTop>gapTop+125)))){
         player.style.top = 100 + "px";
         jumping=1
+        gameOverSound.play()
         removeAnimation()
         showEndScreen()
     }
@@ -106,6 +116,8 @@ function showStartScreen() {
     startScreen.style.display ='block';
     endScreen.style.display ='none'
     counter=0;
+    score.style.color='';
+    score.style.fontSize="";
     }
 
 
@@ -161,4 +173,8 @@ function level2() {
 
 function playJumpSound() {
 jumpSound.play()
+}
+
+function hideWelcome() {
+    welcomeText.style.visibility='none';
 }

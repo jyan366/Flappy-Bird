@@ -30,6 +30,20 @@ body {
     display: block;
 }
 
+#start-screen p{
+    margin: auto;
+    background-color: transparent;
+    position: absolute;
+    height: 30px;
+    width: 400px;
+    margin: auto;
+    background: transparent;
+    text-align: center;
+    top: 100px;
+    z-index: 10000;
+    display: block;
+}
+
 
 
 #end-screen {
@@ -154,9 +168,9 @@ body {
     background:url(../images/bottom.png);
     color: white;
     text-align: center;
-    font-size: 150%;
+    font-size: 200%;
     font-family: 'VT323';
-    top: 30px;
+    padding-top: 5px;
 }
 
 #score {
@@ -174,6 +188,6 @@ body {
     font-family: 'VT323';
     text-align: center;
     background-color: transparent;
-    font-size: 150%;
+    font-size: 120%;
     line-height: 50px;
 }
