@@ -14,11 +14,16 @@
     <title>Flappy Bird</title>
 </head>
 <body>
+    
     <div id ="game-box">
+        <div id="start-screen">
+            <a onclick="hideStartScreen()">START GAME</a></div>
         <div id="player"></div>
         <div id="tube"></div>
         <div id="gap"></div>
     </div>
+    <div id="end-screen"></div>
+
     <div class="score-area">
         <p id="current-score"><span id="score">0</span></p>
         <p id="high-score">Highscore:<span id="best">0</span></p>

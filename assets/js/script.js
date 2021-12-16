@@ -8,6 +8,7 @@ var jumping = 0;
 let counter = 0;
 let best = document.getElementById('best')
 let score = document.getElementById('score')
+let startScreen = document.getElementById('start-screen')
 
 
 // iterate animation
@@ -45,6 +46,7 @@ setInterval (function() {
         removeAnimation()
         resetScoreBoard ()
     }
+    
 },5);
 
 // jump function
@@ -63,15 +65,29 @@ function jump(){
             jumpCount=0;
         }
         jumpCount++;
-        if (counter < 2) {
-            addAnimation() }
-            else {
-                removeAnimation ()
-                level2() }
-
+        addAnimation() 
     },10);
 }
 
+// game over
+
+
+
+
+
+
+// Stop animation and gravity
+function stopAll() {
+    removeAnimation();
+    playerTop = 100;
+}
+
+
+// hide start Screen
+
+function hideStartScreen() {
+startScreen.style.visibility ='hidden';
+}
 
 // increment scoreboard
 
@@ -104,15 +120,10 @@ function addAnimation() {
     gap.style.animation="";
 }
 
+
 // increase speed
 function level2() {
-tube.style.position="";
-gap.style.position="";
-tube.style.left="";
-gap.style.left="";
-
-tube.style.animation="tube-move 5s infinite linear";
-gap.style.animation="tube-move 5s infinite linear";
-
+    tube.style.animation.innerText="tube-move 1s infinite linear";
+    gap.style.animation.innerText='tube-move 1s infinite linear';
 }
 

@@ -13,6 +13,33 @@
     overflow: hidden;
 }
 
+#start-screen {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    background: red;
+    text-align: center;
+    line-height: 400px;
+    z-index: 300;
+    display: block;
+}
+
+#start-screen a {
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
+#start-screen a:hover {
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
 #tube {
     height: 500px;
     background-color: black;
