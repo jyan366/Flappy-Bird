@@ -5,10 +5,12 @@ let player = document.getElementById('player')
 let tube = document.getElementById('tube')
 let gap = document.getElementById('gap')
 var jumping = 0;
-let counter = 0;
+var counter = 0;
 let best = document.getElementById('best')
 let score = document.getElementById('score')
 let startScreen = document.getElementById('start-screen')
+let endScreen = document.getElementById('end-screen')
+let endScore = document.getElementById('end-score')
 
 
 // iterate animation
@@ -22,7 +24,6 @@ gap.addEventListener('animationiteration', function() {
         updateHighScore();
     }
     if (counter >= 2) {
-        level2();
         console.log('greater than 2')
     }
 });
@@ -40,14 +41,14 @@ setInterval (function() {
     var gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
     var pTop = -(500-playerTop);
     if((playerTop>475)||((tubeLeft<80)&&(tubeLeft>-5)&&((pTop<gapTop)||(pTop>gapTop+125)))){
-        alert("Game over. Score: "+score.innerText);
         player.style.top = 100 + "px";
-        counter=0;
+        jumping=1
         removeAnimation()
-        resetScoreBoard ()
+        showEndScreen()
     }
-    
 },5);
+
+
 
 // jump function
 
@@ -86,8 +87,31 @@ function stopAll() {
 // hide start Screen
 
 function hideStartScreen() {
-startScreen.style.visibility ='hidden';
+startScreen.style.display ='none';
+jumping=1
+player.style.top = 100 + "px";
+endScreen.style.display ='none';
+removeAnimation()
+resetScoreBoard()
 }
+
+// show start Screen
+
+function showStartScreen() {
+    startScreen.style.display ='block';
+    endScreen.style.display ='none'
+    counter=0;
+    }
+
+
+// show end Screen
+
+function showEndScreen() {
+    endScreen.style.display ='block';
+    }
+    endScore.innerText = `Game over. Score: ${counter+1}`;
+    console.log(score.innerText)
+    console.log(counter)
 
 // increment scoreboard
 
