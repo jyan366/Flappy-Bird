@@ -4,7 +4,7 @@
 The original Flappy Bird game was released in 2013 by Dong Nguyen, once launched it immediately became a viral sensation. The game was simple – one game mode, one character and one possible play option – tap. 
 The game started by tapping to make the character - a yellow bird - jump. The bird is made fly by the user through frequent tapping, with quicker tapping for up and slower tapping for down. Two tubes are randomly generated as you progress. Your score increases once you pass through the fixed gap in the middle of these. The game was simple in terms of graphics, user experience and seemingly, development. For my Milestone 2 Project I have attempted to make a replica of this game, with my own spin. 
 
-View the live project [here](https://jyan366.github.io/Flappy-Bird/)
+View the live project [here.](https://jyan366.github.io/Flappy-Bird/)
  
 # Index
 * [User Experience (UX)](https://github.com/jyan366/Flappy-Bird#user-experience-ux)
@@ -200,7 +200,7 @@ I took inspiration from several tutorials during inital development, however the
 
 
 
-*Thank you to the following individuals for helping me throughout this journey*
+**Thank you to the following individuals for helping me throughout this journey**
 * The support and guidance of my mentor Precious Ijege.
 * The lessons from Code Institute.
 * Tutor James for helping me to solve a sound issue.
