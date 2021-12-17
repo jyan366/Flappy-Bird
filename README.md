@@ -23,10 +23,10 @@ View the live project [here](https://jyan366.github.io/Flappy-Bird/)
   * [Scores](https://github.com/jyan366/Flappy-Bird#scores)
   * [Audio](https://github.com/jyan366/Flappy-Bird#audio)
   * [Game Over Screen](https://github.com/jyan366/Flappy-Bird#game-over-screen)
-* [Future Features](https://github.com/jyan366/Flappy-Bird#existing-featuresfuture-features)
-  * [Change Backgrounds](https://github.com/jyan366/Flappy-Bird#technologies-used)
-  * [Choose Characters](https://github.com/jyan366/Flappy-Bird#design)
-  * [Global Scores](https://github.com/jyan366/Flappy-Bird#design)
+* [Future Features](https://github.com/jyan366/Flappy-Bird#future-features)
+  * [Change Backgrounds](https://github.com/jyan366/Flappy-Bird#change-backgrounds)
+  * [Choose Characters](https://github.com/jyan366/Flappy-Bird#choose-characters)
+  * [Global Scores](https://github.com/jyan366/Flappy-Bird#global-scores)
 * [Technologies Used](https://github.com/jyan366/Flappy-Bird#technologies-used)
 * [Languages Used](https://github.com/jyan366/Flappy-Bird#languages-used)
 * [Frameworks Used](https://github.com/jyan366/Flappy-Bird#frameworks-libraries--programs-used)
@@ -60,7 +60,7 @@ The colours used in my version of Flappy Bird were based on the original colours
  
 ### Character
 For my character, I chose an alternative design to the original game. My character is a brown bird, with a red top hat. I found this character to be entertaining, without taking away from the simplicity of the game. You can see the original source of this image here: https://key0.cc/fr/47289-All-Photo-Png-Clipart-Flappy-Bird-Sprite-Png. 
-(link to bird 2 png)
+![](/assets/images/bird2.png)
 
 ### Background
 For my background, I chose to adopt the original background of the game – a blue sky with clouds. Due to my method for hit detection (which I will speak about later), I found that including the clouds in-game was too complicated. For this reason I have chosen to have the background remove the clouds while the game is running.
