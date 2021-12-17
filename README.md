@@ -1,3 +1,5 @@
+![](/assets/images/flappyhome.png)
+
 # Introduction
 The original Flappy Bird game was released in 2013 by Dong Nguyen, once launched it immediately became a viral sensation. The game was simple – one game mode, one character and one possible play option – tap. 
 The game started by tapping to make the character - a yellow bird - jump. The bird is made fly by the user through frequent tapping, with quicker tapping for up and slower tapping for down. Two tubes are randomly generated as you progress. Your score increases once you pass through the fixed gap in the middle of these. The game was simple in terms of graphics, user experience and seemingly, development. For my Milestone 2 Project I have attempted to make a replica of this game, with my own spin. 
@@ -57,13 +59,16 @@ As a player I want:
 ## Design
 ### Colour scheme
 The colours used in my version of Flappy Bird were based on the original colours of the game. I hoped for my recreation of this game to feel familiar and nostalgic for users, while maintaining a beautiful design.
+![](/assets/images/flappycolours.png)
  
 ### Character
 For my character, I chose an alternative design to the original game. My character is a brown bird, with a red top hat. I found this character to be entertaining, without taking away from the simplicity of the game. You can see the original source of this image here: https://key0.cc/fr/47289-All-Photo-Png-Clipart-Flappy-Bird-Sprite-Png. 
+
 ![](/assets/images/bird2.png)
 
 ### Background
 For my background, I chose to adopt the original background of the game – a blue sky with clouds. Due to my method for hit detection (which I will speak about later), I found that including the clouds in-game was too complicated. For this reason I have chosen to have the background remove the clouds while the game is running.
+
 ![](/assets/images/background.png)
 
 ### Border
@@ -71,6 +76,7 @@ While exploring potential borders, I tried out a gold border. Once I saw this I 
 
 ### Tubes
 For the tubes, I chose to use the same green tubes that can be found in the Mario games.
+
 ![](/assets/images/mario.jpeg)
 
 ### Fonts
@@ -150,8 +156,6 @@ Google Fonts
 
 
 ### Testing tools used
-Autoprefixer
-* Autoprefixer is used to parsethe CSS and to add vendor prefixes to CSS rules.
 W3C Markup Validation Service
 * The W3C MarkUp Validation Service is used to check whether there were any errors in the HTML5 code.
 W3C CSS validator
@@ -160,9 +164,16 @@ JShint
 * JShint is a JavaScript validator dat is used to check wheter there were any errors in the JavaScript code.
  
 ### Responsiveness
-* Responsiveness of the game is tested with Chrome Dev Tools and Lightbox.
+* Responsiveness of the game is tested with Chrome Dev Tools and AmIResponsive.
 * The game has been tested across all screen sizes, and performs well on each.
 * The game has been tested across all screen browsers, and performs well on each.
+
+### Performance
+* Performance of the game is tested with Lightbox and Peer Reviews.
+* Overall feedback on the game was extremely positive.
+
+![](/assets/images/flappylightbox.png)
+
 
 ## Deployment
 ### Deployment of my project
@@ -181,9 +192,8 @@ All of the text within this game is my own content.
 I took inspiration from several tutorials during inital development, however the finished project is unique and original.
 
 ### Tutorials
-* Coding Gravity and Ball Bounce: Javascript - https://www.youtube.com/watch?v=F9LUPoH400M&t=83s
-* The Easiest Flappy Bird Tutorial Ever? - https://www.youtube.com/watch?v=3SsYZDJdeXk
-
+* [Coding Gravity and Ball Bounce: Javascript](https://www.youtube.com/watch?v=F9LUPoH400M&t=83s)
+* [The Easiest Flappy Bird Tutorial Ever?](https://www.youtube.com/watch?v=3SsYZDJdeXk)
 
 ### Media & Audio
 * All images and audio clips are taken from royalty free sites.
