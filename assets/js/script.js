@@ -126,7 +126,7 @@ function showStartScreen() {
 function showEndScreen() {
     removeAnimation()
     endScreen.style.display ='block';
-    endScore.innerText = `Game over. Score: ${score.innerHTML}`;
+    endScore.innerText = `Game over. You Scored ${score.innerHTML}.`;
 }
 
 // increment scoreboard
