@@ -126,7 +126,6 @@ function showStartScreen() {
 function showEndScreen() {
     removeAnimation()
     endScreen.style.display ='block';
-    console.log(score.innerHTML)
     endScore.innerText = `Game over. Score: ${score.innerHTML}`;
 }
 
@@ -173,8 +172,4 @@ function level2() {
 
 function playJumpSound() {
 jumpSound.play()
-}
-
-function hideWelcome() {
-    welcomeText.style.visibility='none';
 }
