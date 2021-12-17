@@ -5,18 +5,18 @@ The game started by tapping to make the character - a yellow bird - jump. The bi
 View the live project [here](https://jyan366.github.io/Flappy-Bird/)
  
 # Index
-•	User experience (UX)
-o	Project goals
-o	User stories
-o	Design
-o	Wireframes
-•	Features
-o	Existing features
-o	Features left to implement in the future
-•	Technologies used
-•	Testing
-•	Deployment
-•	Credits
+•	User experience (UX)[User experience (UX)](https://github.com/jyan366/Flappy-Bird#user-experience-ux)
+o	Project goals[here](https://jyan366.github.io/Flappy-Bird/)
+o	User stories[here](https://jyan366.github.io/Flappy-Bird/)
+o	Design[here](https://jyan366.github.io/Flappy-Bird/)
+o	Wireframes[here](https://jyan366.github.io/Flappy-Bird/)
+•	Features[here](https://jyan366.github.io/Flappy-Bird/)
+o	Existing features[here](https://jyan366.github.io/Flappy-Bird/)
+o	Features left to implement in the future[here](https://jyan366.github.io/Flappy-Bird/)
+•	Technologies used[here](https://jyan366.github.io/Flappy-Bird/)
+•	Testing[here](https://jyan366.github.io/Flappy-Bird/)
+•	Deployment[here](https://jyan366.github.io/Flappy-Bird/)
+•	Credits[here](https://jyan366.github.io/Flappy-Bird/)
  
 # User experience (UX)
 
