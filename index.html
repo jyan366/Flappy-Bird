@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onKeyDown="if(event.keyCode==32) jump()" onKeyDown="if(event.keyCode==32) hideWelcome()">
+<html lang="en" onKeyDown="if(event.keyCode==32) jump(); if(event.keyCode==32) hideWelcome()">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
         <div id="end-screen">
             <p id="end-score"></p>
             <a onclick="showStartScreen()">Back To Start</a></div>
-        <div id="player"><img src="assets/images/bird2.png"></div>
+        <div id="player"><img src="assets/images/bird2.png" alt="Flappy Bird Image"></div>
         <div id="tube"></div>
         <div id="gap"></div>
         

@@ -39,7 +39,7 @@ gap.addEventListener('animationiteration', function() {
 });
 
 
-// gravity interal
+// gravity interal and hit detection
 
 setInterval (function() {
     var playerTop = 
@@ -84,12 +84,6 @@ function jump(){
         
     },10);
 }
-
-// game over
-
-
-
-
 
 
 // Stop animation and gravity
@@ -160,15 +154,7 @@ function addAnimation() {
     gap.style.animation="";
 }
 
-
-// increase speed
-function level2() {
-    tube.style.left='1000px';
-    tube.style.left='1000px';
-    removeAnimation();
-    tube.style.animation='tube-move 1500ms infinite linear';
-    gap.style.animation='tube-move 1500ms infinite linear';
-}
+// plays jump sound
 
 function playJumpSound() {
 jumpSound.play()
