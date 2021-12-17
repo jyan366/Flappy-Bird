@@ -1,108 +1,168 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+The original Flappy Bird game was released in 2013 by Dong Nguyen, once launched it immediately became a viral sensation. The game was simple – one game mode, one character and one possible play option – tap. 
+The game started by tapping to make the character - a yellow bird - jump. The bird is made fly by the user through frequent tapping, with quicker tapping for up and slower tapping for down. Two tubes are randomly generated as you progress. Your score increases once you pass through the fixed gap in the middle of these. The game was simple in terms of graphics, user experience and seemingly, development. For my Milestone 2 Project I have attempted to make a replica of this game, with my own spin. 
 
-Welcome jyan366,
+View the live project [here](https://jyan366.github.io/Flappy-Bird/)
+ 
+Index
+•	User experience (UX)
+o	Project goals
+o	User stories
+o	Design
+o	Wireframes
+•	Features
+o	Existing features
+o	Features left to implement in the future
+•	Technologies used
+•	Testing
+•	Deployment
+•	Credits
+ 
+User experience (UX)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Project goals
+•	My goal when undertaking this project was to demonstrate the key features of JavaScript, while also demonstrating my retained and developed understanding of HTML and CSS.
+•	From a gameplay perspective, I wanted the game to be difficult but playable, with different feedback for different events.
+•	I wanted the game to have one difficulty, as per the original game. The difficulty of this game is derived from the fact that it requires 100% of the users attention. In order to provide some feedback I hoped to include a response once a new high score is set.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+User stories
+As a player I want:
+1.	As a player, I want to be able to play the game immediately.
+2.	As a player, I want to easily be able to understand the controls.
+3.	As a player, I want the game to be challenging.
+4.	As a player, I want to be able to restart the game. 
+5.	As a player, I want to hear sounds when I jump, increase my score, get a new high score, or die. 
+6.	As a player, I want to play the game on all devices and browsers.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+Design
+•	Colour scheme
+The colours used in my version of Flappy Bird were based on the original colours of the game. I hoped for my recreation of this game to feel familiar and nostalgic for users, while maintaining a beautiful design.
+ 
+Character
+For my character, I chose an alternative design to the original game. My character is a brown bird, with a red top hat. I found this character to be entertaining, without taking away from the simplicity of the game. You can see the original source of this image here: https://key0.cc/fr/47289-All-Photo-Png-Clipart-Flappy-Bird-Sprite-Png. 
+(link to bird 2 png)
 
-A blue button should appear to click: _Make Public_,
+Background
+For my background, I chose to adopt the original background of the game – a blue sky with clouds. Due to my method for hit detection (which I will speak about later), I found that including the clouds in-game was too complicated. For this reason I have chosen to have the background remove the clouds while the game is running.
+(link to background)
 
-Another blue button should appear to click: _Open Browser_.
+Border
+While exploring potential borders, I tried out a gold border. Once I saw this I knew it was what I was looking for. The 10px gold borders give the game an arcade feel to it, which I believe enhances user experience. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Tubes
+For the tubes, I chose to use the same green tubes that can be found in the Mario games.
 
-A blue button should appear to click: _Make Public_,
+Fonts
+I used the VT323 font from Google Fonts throughout my game. The stylish font is similar to the font used in the original Flappy Bird game, and has an arcade game design. 
 
-Another blue button should appear to click: _Open Browser_.
+Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Existing features
 
-To log into the Heroku toolbelt CLI:
+Start screen
+•	My Start Screen is simple, with one option to “Play Game”. This screen also includes a one line instruction on how to play.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Game Area
+•	The game was created using HTML with three elements – The character, the tubes and the gap. 
+•	The character is an imported image of the bird within a square div.
+•	The tube is the length of the Game Area, however appears as two tubes due to the gap being the same colour as the background, as well as black border top and bottom of the gap.
+•	The gap overlays the tube and blends in with the background. Its height is randomly generated to be between the top and the bottom of the tube.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Controlling the game
+•	The game can be controlled on PC by pressing space-bar or clicking the bottom of the screen. On mobile this can be done by tapping the bottom of the screen.
 
-------
+The Game
+•	The game begins after clicking start on the first jump. This starts an infinite animation which brings the tubs from all the way right, to offscreen left. This creates the moving tubes design.
+•	The gravity and jumping functions simply add and take away from the top of the character. Gravity is done on an interval and jumping on command. When jumping is active gravity is inactive. 
+•	The hit detection, put in words, states “If the character hits the tube, but is not also hitting the gap, the game is over.”
+•	When the animation plays through, the scoring sound plays.
 
-## Release History
+Scores
+•	During the game, the player can see their current score at the top of the screen in white. If the player hits a new high score, a sound plays and the score changes from white to gold. 
+•	When the game ends the players score is displayed to them.
+•	The high score area is updated if current score is greater than the high score. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Audio
+•	For my project I decided that I would need 4 sounds. Jump, increase score, new high score and game over sounds were all found online and inserted from “free-download” sites with authorisation from the creators. Each sound is unique, and they all serve to increase user experience. 
+•	Jump – This sound plays when the function jump() is active.
+•	Score – This sound plays every time the animation iterates.
+•	High Score – This sound plays when the current score equals the high score, and adds pressure.
+•	Game Over – This sound is a trombone, and plays once the hit detection activates.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Game Over screen
+•	The Game Over screen shows when hit detection activates, and displays the users final score using a template literal, as well as an option to go back to the menu. 
+Features left to implement in the future
+•	Change Backgrounds – I think a nice feature to include would be the original background, or different styled backgrounds. I ran in to an issue due to the fact that my tube div stretched the entire length of the game, and could not make the gap transparent. 
+•	Choose Characters – I would like to allow the user to choose between multiple characters, and perhaps have characters unlock once a score is reached.
+•	Global Scores – I would like to be able to keep a database of all scores achieved on this game, as well as user names. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Technologies used
+Languages used
+•	HTML5
+o	HTML5 provides the structure and the content for my project.
+•	CSS3
+o	CSS3 provides the style of the HTML5 elements.
+•	Javascript
+o	JavaScript provides the interactivity of the project.
+Frameworks, libraries & programs used
+•	Gitpod
+o	The GitPod is used to develop the project.
+•	Git
+o	The Git was used for version control to commit to Git and push to GitHub.
+•	GitHub
+o	The GitHub is used to host the project.
+•	Google Fonts
+o	Google Fonts is used to provide the font VT323 for all the text that is used in the project.
+Testing tools used
+•	Autoprefixer
+o	Autoprefixer is used to parsethe CSS and to add vendor prefixes to CSS rules.
+•	W3C Markup Validation Service
+o	The W3C MarkUp Validation Service is used to check whether there were any errors in the HTML5 code.
+•	W3C CSS validator
+o	The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
+•	JShint
+o	JShint is a JavaScript validator dat is used to check wheter there were any errors in the JavaScript code.
+Testing
+Code validators
+•	HTML Validator: No errors or warnings to show. 
+•	CSS Validator: No errors found. 
+•	JS Hint: No errors found, 39 warnings.
+ 
+Responsiveness
+•	Responsiveness of the game is tested with Chrome Dev Tools and Lightbox.
+ 
+•	The game has been tested across all screen sizes, and performs well on each.
+•	The game has been tested across all screen browsers, and performs well on each.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Deployment
+Deployment of my project
+This project is hosted in GitHub pages, to make my project visible to others.
+The project is deployed via the following steps:
+1.	Log in to GitHub and go to the repository.
+2.	At the top of the repository, locate the Settings button and click on it.
+3.	On the Settings page, scroll down to the GitHub Pages section.
+4.	Select Master Branche by the source section.
+5.	The page refreshes automatically.
+6.	Scroll down to the GitHub Page section and the link of the website is standing in the green bar.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Credits
+Content
+All of the text within this game is my own content.
+I took inspiration from several tutorials during inital development, however the finished project is unique and original.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Tutorials
+•	Coding Gravity and Ball Bounce: Javascript - https://www.youtube.com/watch?v=F9LUPoH400M&t=83s
+•	The Easiest Flappy Bird Tutorial Ever? - https://www.youtube.com/watch?v=3SsYZDJdeXk
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Media & Audio
+•	All images and audio clips are taken from royalty free sites.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Thank you to the following individuals for helping me throughout this journey
+•	The support and guidance of my mentor Precious Ijege.
+•	The lessons from Code Institute.
+•	Tutor James for helping me to solve a sound issue.
