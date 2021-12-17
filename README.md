@@ -64,13 +64,14 @@ For my character, I chose an alternative design to the original game. My charact
 
 ### Background
 For my background, I chose to adopt the original background of the game – a blue sky with clouds. Due to my method for hit detection (which I will speak about later), I found that including the clouds in-game was too complicated. For this reason I have chosen to have the background remove the clouds while the game is running.
-(link to background)
+![](/assets/images/background.png)
 
 ### Border
 While exploring potential borders, I tried out a gold border. Once I saw this I knew it was what I was looking for. The 10px gold borders give the game an arcade feel to it, which I believe enhances user experience. 
 
 ### Tubes
 For the tubes, I chose to use the same green tubes that can be found in the Mario games.
+![](/assets/images/mario.jpeg)
 
 ### Fonts
 I used the VT323 font from Google Fonts throughout my game. The stylish font is similar to the font used in the original Flappy Bird game, and has an arcade game design. 
